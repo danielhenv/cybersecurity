@@ -80,3 +80,36 @@ form button {
     font-size: 1.5rem;
   }
 }
+
+/* Hero Banner (con foto)*/
+.hero-banner {
+  background-image: url('../img/ciberseguridad.png');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 90%;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+}
+
