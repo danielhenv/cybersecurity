@@ -1,0 +1,25 @@
+# Archivos del sistema
+.DS_Store        # MacOS
+Thumbs.db        # Windows
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+
+# Node 
+node_modules/
+package-lock.json
+
+# Archivos de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de despliegue o producción 
+dist/
+build/
+
+# Archivos sensibles 
+.env
