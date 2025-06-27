@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,7 @@
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
   <!-- Barra de navegación -->
@@ -100,53 +102,51 @@
     </div>
 
     <!-- Carrusel de casos reales -->
-    <h3 class="text-center mt-5 mb-4">Casos Reales de Ciberataques</h3>
-    <div id="carruselCasos" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div id="carouselEjemplos" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-
         <div class="carousel-item active">
-          <div class="d-flex flex-column align-items-center p-4 bg-light">
-            <h5>Phishing a usuarios de Gmail (2017)</h5>
-            <p class="text-center">Un ataque engañó a miles de usuarios con enlaces falsos a páginas de inicio de sesión.</p>
+          <img src="img/phishing.webp" class="d-block w-100" alt="Ejemplo de Phishing">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Phishing</h5>
+            <p>Correo falso simulando ser tu banco para robar contraseñas.</p>
           </div>
         </div>
-
         <div class="carousel-item">
-          <div class="d-flex flex-column align-items-center p-4 bg-light">
-            <h5>Ataque de ransomware WannaCry (2017)</h5>
-            <p class="text-center">Afectó a más de 200,000 dispositivos en 150 países cifrando archivos y exigiendo rescate.</p>
+          <img src="img/ransomware.webp" class="d-block w-100" alt="Ejemplo de Ransomware">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ransomware</h5>
+            <p>Tu información es cifrada y te exigen un rescate.</p>
           </div>
         </div>
-
         <div class="carousel-item">
-          <div class="d-flex flex-column align-items-center p-4 bg-light">
-            <h5>Ataque DDoS a Dyn (2016)</h5>
-            <p class="text-center">Derribó servicios como Spotify, Twitter y Reddit mediante dispositivos IoT infectados.</p>
+          <img src="img/ddos.webp" class="d-block w-100" alt="Ejemplo de DDoS">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ataque DDoS</h5>
+            <p>Un sitio es saturado con tráfico para que deje de funcionar.</p>
           </div>
         </div>
-
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carruselCasos" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carruselCasos" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplos" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-  </div>
 
-  <!-- jQuery, Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Script para mostrar/ocultar detalles -->
-  <script>
-    function toggleDetalle(btn) {
-      const detalle = btn.nextElementSibling;
-      $(detalle).slideToggle();
-    }
-  </script>
+    <!-- Script para mostrar/ocultar detalles -->
+    <script>
+      function toggleDetalle(btn) {
+        const detalle = btn.nextElementSibling;
+        $(detalle).slideToggle();
+      }
+    </script>
 
 </body>
-</html>
 
+</html>
