@@ -1,42 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio - Ciberseguridad</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ciberseguridad</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ciberseguridad</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="navbarNav" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="amenazas.html">Amenazas</a></li>
-          <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="amenazas.html">Amenazas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consejos.html">Consejos</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="bg-primary text-white text-center py-5">
-    <h1>Protege tu vida digital</h1>
-    <p>Descubre cómo mantener tu información segura en línea</p>
-    <img src="img/ciberseguridad.png" class="img-fluid mt-3" alt="Seguridad en línea">
+  <!-- Banner con imagen de fondo -->
+  <header class="hero-banner">
+    <div class="hero-overlay">
+      <h1>Protege tu vida digital</h1>
+      <p class="lead">Conoce los riesgos, aprende a prevenirlos y mantente seguro en internet.</p>
+      <a href="amenazas.html" class="btn btn-primary mt-3">Explorar Amenazas</a>
+    </div>
   </header>
 
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2025 Proyecto Ciberseguridad</p>
+  <!-- Secciones informativas -->
+  <section class="container my-5">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es la ciberseguridad?</h5>
+            <p class="card-text">La ciberseguridad es el conjunto de prácticas y tecnologías diseñadas para proteger sistemas, redes y datos.</p>
+            <a href="#intro" class="btn btn-outline-dark">Leer más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Amenazas comunes</h5>
+            <p class="card-text">Aprende sobre los ataques más frecuentes como phishing, malware o ransomware y cómo reconocerlos.</p>
+            <a href="amenazas.html" class="btn btn-outline-dark">Ver amenazas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Consejos de seguridad</h5>
+            <p class="card-text">Descubre buenas prácticas para proteger tus cuentas, datos y dispositivos personales.</p>
+            <a href="consejos.html" class="btn btn-outline-dark">Ver consejos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introducción -->
+  <section class="bg-light py-5" id="intro">
+    <div class="container">
+      <h2 class="text-center mb-4">¿Por qué es importante la ciberseguridad?</h2>
+      <p>
+        En un mundo donde cada vez más aspectos de nuestra vida están conectados a internet, la protección de nuestros datos personales y la privacidad digital se vuelve esencial. Desde redes sociales hasta bancos, una mala práctica puede abrir las puertas a ciberdelincuentes.
+      </p>
+      <p>
+        El objetivo de este sitio es ayudarte a identificar riesgos comunes, entender cómo ocurren los ataques y darte herramientas prácticas para navegar de forma segura en línea.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Ciberseguridad Web. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Scripts Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

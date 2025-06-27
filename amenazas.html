@@ -2,100 +2,151 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amenazas Comunes</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amenazas Comunes - Ciberseguridad</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ciberseguridad</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ciberseguridad</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="navbarNav" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link active" href="amenazas.html">Amenazas</a></li>
-          <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="amenazas.html">Amenazas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consejos.html">Consejos</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Título -->
   <div class="container mt-5">
-    <h2 class="text-center mb-4">Amenazas Comunes</h2>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <!-- Tarjeta 1 -->
-      <div class="col">
+    <h1 class="mb-4">Amenazas Comunes en Ciberseguridad</h1>
+    <p class="text-center">Conoce los principales tipos de ataques y cómo puedes protegerte de ellos.</p>
+
+    <!-- Tarjetas de amenazas -->
+    <div class="row mt-4">
+      <!-- Phishing -->
+      <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Phishing</h5>
-            <p class="card-text">Intento de engañar a la víctima para que proporcione información confidencial.</p>
+            <p class="card-text">Fraude que intenta engañar al usuario para revelar información confidencial.</p>
+            <button class="btn btn-outline-primary" onclick="toggleDetalle(this)">Ver más</button>
+            <div class="mt-2 detalle" style="display: none;">
+              <p>Ejemplo: Correos falsos que imitan a bancos solicitando tus datos personales.</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Tarjeta 2 -->
-      <div class="col">
+
+      <!-- Ransomware -->
+      <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Ransomware</h5>
-            <p class="card-text">Secuestra datos personales y pide un rescate para liberarlos.</p>
+            <p class="card-text">Malware que bloquea el acceso a tu equipo y exige un rescate.</p>
+            <button class="btn btn-outline-primary" onclick="toggleDetalle(this)">Ver más</button>
+            <div class="mt-2 detalle" style="display: none;">
+              <p>Ejemplo: WannaCry cifraba tus archivos y pedía pago en Bitcoin para recuperarlos.</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Tarjeta 3 -->
-      <div class="col">
+
+      <!-- Malware -->
+      <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Malware</h5>
-            <p class="card-text">Software malicioso diseñado para dañar o infiltrarse en un sistema.</p>
+            <p class="card-text">Software malicioso que daña o accede a tu sistema sin permiso.</p>
+            <button class="btn btn-outline-primary" onclick="toggleDetalle(this)">Ver más</button>
+            <div class="mt-2 detalle" style="display: none;">
+              <p>Ejemplo: Troyanos que se hacen pasar por programas legítimos.</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Tarjeta 4 -->
-      <div class="col">
+
+      <!-- DDoS -->
+      <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title">DDoS</h5>
-            <p class="card-text">Ataques que sobrecargan servidores para que dejen de funcionar.</p>
+            <h5 class="card-title">Ataques DDoS</h5>
+            <p class="card-text">Saturan servidores con tráfico hasta hacerlos inaccesibles.</p>
+            <button class="btn btn-outline-primary" onclick="toggleDetalle(this)">Ver más</button>
+            <div class="mt-2 detalle" style="display: none;">
+              <p>Ejemplo: Caída de sitios como Twitter o Netflix por ataques DDoS masivos.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Acordeón con ejemplos -->
-    <div class="accordion mt-5" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-            Caso real: Phishing en correos bancarios
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show">
-          <div class="accordion-body">
-            En 2022, muchos usuarios recibieron correos falsos de bancos solicitando verificar sus datos.
+    <!-- Carrusel de casos reales -->
+    <h3 class="text-center mt-5 mb-4">Casos Reales de Ciberataques</h3>
+    <div id="carruselCasos" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="d-flex flex-column align-items-center p-4 bg-light">
+            <h5>Phishing a usuarios de Gmail (2017)</h5>
+            <p class="text-center">Un ataque engañó a miles de usuarios con enlaces falsos a páginas de inicio de sesión.</p>
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-            Caso real: Ransomware WannaCry
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            En 2017, WannaCry afectó hospitales y empresas en todo el mundo exigiendo pagos en bitcoins.
+
+        <div class="carousel-item">
+          <div class="d-flex flex-column align-items-center p-4 bg-light">
+            <h5>Ataque de ransomware WannaCry (2017)</h5>
+            <p class="text-center">Afectó a más de 200,000 dispositivos en 150 países cifrando archivos y exigiendo rescate.</p>
           </div>
         </div>
+
+        <div class="carousel-item">
+          <div class="d-flex flex-column align-items-center p-4 bg-light">
+            <h5>Ataque DDoS a Dyn (2016)</h5>
+            <p class="text-center">Derribó servicios como Spotify, Twitter y Reddit mediante dispositivos IoT infectados.</p>
+          </div>
+        </div>
+
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carruselCasos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carruselCasos" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
     </div>
   </div>
 
+  <!-- jQuery, Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para mostrar/ocultar detalles -->
+  <script>
+    function toggleDetalle(btn) {
+      const detalle = btn.nextElementSibling;
+      $(detalle).slideToggle();
+    }
+  </script>
+
 </body>
 </html>
+
